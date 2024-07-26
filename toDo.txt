@@ -1,0 +1,17 @@
+# settings for a town (i.e. anyone not a resident. HIGH priority? medium for one listener and high on the other to allow plot-based to override? Needs to allow plot permissions to override). Default ON to everything?: 
+- Disable entry (retry the plotChangeEvent to avoid overhead of playerMoveEvent)
+- Including teleport / portal events / fluids?
+- Disable clicking
+- Disable interactions
+- Disable break/place/use
+- Give outsider “access rights” i.e. entry
+# settings for a plot - by default overrides town settings
+same as the above, but can be overridden. 
+# What to do about embassy? commercial? maybe disable the entry/tp requirements? Check ifOwner? 
+
+
+BaseLockClass
+ public bool bla;
+
+TownLockClass extends BaseLockClass
+PlotLockClass extends TownLockClass

@@ -1,0 +1,23 @@
+name: SerenProtection
+main: com.serendipitymc.protection.protect.protect
+version: 2.0
+author: nickewa
+description: Provides various tweaks to protection plugins (towny mainly)
+depend: [Towny]
+
+commands:
+    townlock:
+      usage: "/townlock [noclick|lockout]"
+
+permissions:
+    serendipity.townlock.*:
+      description: All townlock stuff
+      children:
+        serendipity.townlock.bypass: true
+        serendipity.townlock.debug: true
+      serendipity.townlock.bypass:
+        description: Allows you to bypass locks
+        default: op
+      serendipity.townlock.debug:
+        description: Internal stuff
+        default: op
